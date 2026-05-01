@@ -7,6 +7,7 @@
 
 import XCTest
 
+/// Keeps a dedicated launch test and screenshot attachment for the app target.
 final class MarkdownUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {

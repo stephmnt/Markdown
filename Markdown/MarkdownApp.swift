@@ -6,27 +6,18 @@
 //
 
 import SwiftUI
-import SwiftData
 
+/// App entry point: wires the document system, the editor view and custom commands.
 @main
 struct MarkdownApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        DocumentGroup(newDocument: MarkdownDocument()) { file in
+            ContentView(editor: file.$document.editor)
+                .frame(minWidth: 700, minHeight: 500)
         }
-        .modelContainer(sharedModelContainer)
+        .windowStyle(.hiddenTitleBar)
+        .commands {
+            DocumentCommands()
+        }
     }
 }

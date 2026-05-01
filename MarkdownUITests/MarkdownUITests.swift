@@ -7,6 +7,7 @@
 
 import XCTest
 
+/// Basic UI test target used to validate launch and future editor interactions.
 final class MarkdownUITests: XCTestCase {
 
     override func setUpWithError() throws {
