@@ -12,12 +12,16 @@ import SwiftUI
 struct MarkdownApp: App {
     var body: some Scene {
         DocumentGroup(newDocument: MarkdownDocument()) { file in
-            ContentView(editor: file.$document.editor)
+            ContentView(
+                editor: file.$document.editor,
+                documentURL: file.fileURL
+            )
                 .frame(minWidth: 700, minHeight: 500)
         }
         .windowStyle(.hiddenTitleBar)
         .commands {
             DocumentCommands()
+            FormattingCommands()
         }
     }
 }

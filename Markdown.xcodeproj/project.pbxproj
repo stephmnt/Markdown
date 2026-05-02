@@ -24,6 +24,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		978F4DE52FA6687B009B5A41 /* Markdown.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = Markdown.xctestplan; sourceTree = "<group>"; };
 		97B4B52E2F98A3C700B941E1 /* Markdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Markdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B4B53D2F98A3C900B941E1 /* MarkdownTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkdownTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97B4B5472F98A3C900B941E1 /* MarkdownUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarkdownUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +76,7 @@
 		97B4B5252F98A3C700B941E1 = {
 			isa = PBXGroup;
 			children = (
+				978F4DE52FA6687B009B5A41 /* Markdown.xctestplan */,
 				97B4B5302F98A3C700B941E1 /* Markdown */,
 				97B4B5402F98A3C900B941E1 /* MarkdownTests */,
 				97B4B54A2F98A3C900B941E1 /* MarkdownUITests */,
@@ -394,6 +396,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Markdown/Markdown.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -427,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Markdown/Markdown.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
